@@ -5,7 +5,13 @@
 }
 
 :root {
-    --primary-color: #000958;
+    --heading-color: #000958;
+    --primary-color: #ff5b2e;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
 }
 
 html {
@@ -15,4 +21,87 @@ html {
 body {
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
+    background: #fffaf5;
+}
+
+/* Common */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+button,
+textarea,
+input,
+select {
+    font-family: inherit;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 214px;
+    height: 56px;
+    border-radius: 999px;
+    border: 1px solid var(--primary-color);
+
+    background: transparent;
+    color: var(--primary-color);
+
+    font-weight: 500;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: -18px;
+    padding: 26px 0 8px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item__link {
+    padding: 8px 18px;
+    color: #5e6085;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+.navbar-item__link:hover {
+    color: #000958;
+    font-weight: 600;
+}
+
+.header__btn {
+    min-width: 117px;
+    height: 50px;
+    border-color: currentColor;
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.header__btn:hover {
+    background: var(--heading-color);
+    color: #fffaf5;
 }
