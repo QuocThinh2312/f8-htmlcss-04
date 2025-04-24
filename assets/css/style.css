@@ -304,6 +304,7 @@ select {
 
 /* About */
 .about {
+    padding-bottom: 55px;
     margin-top: 138px;
 }
 
@@ -580,4 +581,115 @@ select {
 
 .tab__content-item--active {
     display: block;
+}
+
+/* Service */
+.service {
+    padding: 68px 0 100px;
+    margin-top: 130px;
+    background: #fff6ed;
+}
+
+.service__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 71px;
+    margin-top: 71px;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__desc {
+    margin-bottom: 15px;
+    color: #5e6085;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+
+.service-card {
+    width: 294px;
+    padding: 30px 22px 30px 28px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #fff;
+}
+
+.service-card + .service-card {
+    margin-top: 24px;
+}
+
+.service-card__title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000958;
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+}
+
+.service-card__title::before {
+    width: 2px;
+    height: 22px;
+    border-radius: 999px;
+    background: linear-gradient(var(--primary-color) 0.39%, #ffa187 100.29%);
+    content: "";
+}
+
+.service-card__desc {
+    margin: 18px 0 24px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.service-card__link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #34396a;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.service-card__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2.5px;
+}
+
+.service__column:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+.service__media {
+    position: relative;
+}
+
+.service__media::after {
+    position: absolute;
+    inset: auto 16px 0 16px;
+    height: 300px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+    content: "";
+}
+
+.service__img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 17px;
+}
+
+.service__cta:hover {
+    background: var(--primary-color);
+    color: #fff6ed;
 }
