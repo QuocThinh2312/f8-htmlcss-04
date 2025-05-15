@@ -625,7 +625,7 @@ select {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #000958;
+    color: var(--heading-color);
     font-family: var(--heading-font);
     font-size: 2.2rem;
     font-weight: 600;
@@ -793,7 +793,7 @@ select {
 
 .staff-item__name {
     margin-top: 14px;
-    color: #000958;
+    color: var(--heading-color);
     font-family: var(--heading-font);
     font-size: 2.2rem;
     line-height: 2.2rem;
@@ -811,4 +811,175 @@ select {
 .staff__cta:hover {
     background: var(--primary-color);
     color: #fffaf5;
+}
+
+/* Pricing */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+
+.pricing__top {
+    text-align: center;
+}
+
+.pricing__desc {
+    max-width: 709px;
+    margin: 24px auto 0;
+}
+
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.pricing__switch-inner {
+    position: relative;
+}
+
+.pricing__switch-label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 276px;
+    height: 56px;
+    padding: 0 40px;
+    border-radius: 999px;
+    border: 1px solid #ff5b2e99;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pricing__switch-label::after {
+    position: absolute;
+    inset: 0 0 auto auto;
+    width: 131px;
+    height: 100%;
+    border-radius: 999px;
+    background: var(--primary-color);
+    content: "";
+}
+
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+.pricing__switch-value:last-child {
+    color: #fff;
+}
+
+.pricing__save {
+    position: absolute;
+    inset: -10px -111px auto auto;
+}
+
+.pricing__switch-input:checked + .pricing__switch-label::after {
+    inset: 0 auto auto 0;
+    width: 140px;
+}
+
+.pricing__switch-input:checked
+    + .pricing__switch-label
+    .pricing__switch-value:first-child {
+    color: #fff;
+}
+
+.pricing__switch-input:checked
+    + .pricing__switch-label
+    .pricing__switch-value:last-child {
+    color: var(--primary-color);
+}
+
+.pricing__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+    margin-top: 56px;
+}
+
+.pricing-item {
+    width: 302px;
+    padding: 30px 28px 43px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.pricing-item:hover {
+    box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
+}
+
+.pricing-item__type {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.pricing-item__title {
+    margin: 8px 0 24px;
+    color: #3f4065;
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.pricing-item__price {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 3.4rem;
+}
+
+.pricing-item__btn {
+    min-width: 246px;
+    height: 44px;
+    border: 1px solid rgba(255, 91, 46, 0.6);
+    margin: 22px 0 24px;
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+.pricing-item__btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.pricing-item__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pricing-item__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary-color);
+}
+
+.pricing-item:first-child .pricing-item__item:nth-child(5),
+.pricing-item:first-child .pricing-item__item:nth-child(6),
+.pricing-item:first-child .pricing-item__item:last-child {
+    color: #ff5b2e66;
+}
+
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(6),
+.pricing-item:nth-child(2) .pricing-item__item:last-child {
+    color: #ff5b2e66;
+}
+
+.pricing-item__benefit {
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
 }
