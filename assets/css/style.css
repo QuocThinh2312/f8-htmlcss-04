@@ -983,3 +983,129 @@ select {
     font-size: 1.4rem;
     line-height: 1.4rem;
 }
+
+/* Review */
+.review {
+    padding: 130px 0;
+}
+
+.review__inner {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.review__content {
+    overflow: hidden;
+}
+
+.review__list {
+    display: flex;
+    align-items: center;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    gap: 115px;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.review-item__media {
+    position: relative;
+    flex-shrink: 0;
+    width: 274px;
+    border-radius: 137px;
+}
+
+.review-item__media::after {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 82%;
+    border-radius: inherit;
+    background: #ffda54;
+    content: "";
+}
+
+.review-item__img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.review-item__quote {
+    max-width: 553px;
+    margin: 24px 0 34px;
+    color: #000;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+.review-item__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #282828;
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.review-item__author::before {
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    background: #000;
+    content: "";
+}
+
+.review__control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1.5px solid #ffd1c4;
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.review__control:hover {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.review__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 56px;
+}
+
+.review__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+}
+
+.review__dot:hover {
+    border: none;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.review__dot--active {
+    width: 24px;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-color);
+}
